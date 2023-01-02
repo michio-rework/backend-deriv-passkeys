@@ -273,7 +273,7 @@ export class PasskeyService {
         verified,
         credential,
         success: true,
-        message: "PASSKEY_LOGIN_SUCCESS",
+        message: 'PASSKEY_LOGIN_SUCCESS',
       };
       return status;
     } catch (error) {
