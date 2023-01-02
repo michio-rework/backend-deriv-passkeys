@@ -14,7 +14,7 @@ import {
   RegistrationCredentialJSON,
 } from '@simplewebauthn/typescript-types';
 import { AuthService } from 'src/auth/auth.service';
-import { PASSKEY_LOGIN_SUCCESS } from 'src/constants';
+// import { PASSKEY_LOGIN_SUCCESS } from 'src/constants';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { UserService } from 'src/user/user.service';
 import { VerifyLoginPasskeyDto } from './dto/verify-login-passkey.dto';
@@ -273,7 +273,7 @@ export class PasskeyService {
         verified,
         credential,
         success: true,
-        message: PASSKEY_LOGIN_SUCCESS,
+        message: "PASSKEY_LOGIN_SUCCESS",
       };
       return status;
     } catch (error) {

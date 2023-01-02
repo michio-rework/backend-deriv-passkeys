@@ -4,11 +4,11 @@ import { JwtService } from '@nestjs/jwt';
 import { JwtPayload } from './jwt.strategy';
 import { User } from '@prisma/client';
 import { ConfigService } from '@nestjs/config';
-import {
-  ACCOUNT_CREATE_SUCCESS,
-  ACCOUNT_LOGIN_SUCCESS,
-  INVALID_TOKEN,
-} from 'src/constants';
+// import {
+//   ACCOUNT_CREATE_SUCCESS,
+//   ACCOUNT_LOGIN_SUCCESS,
+//   INVALID_TOKEN,
+// } from 'src/constants';
 import { ILoginStatus, IToken } from './types';
 import { AuthCredentialsDto } from './dto/auth-credentials.dto';
 
@@ -25,7 +25,7 @@ export class AuthService {
   ): Promise<ILoginStatus> {
     let status: ILoginStatus = {
       success: true,
-      message: ACCOUNT_CREATE_SUCCESS,
+      message: 'ACCOUNT_CREATE_SUCCESS',
     };
 
     try {
@@ -46,7 +46,7 @@ export class AuthService {
   async login(authCredentialsDto: AuthCredentialsDto): Promise<ILoginStatus> {
     let status: ILoginStatus = {
       success: true,
-      message: ACCOUNT_LOGIN_SUCCESS,
+      message: 'ACCOUNT_LOGIN_SUCCESS',
     };
     try {
       const user = await this.usersService.findByLogin(authCredentialsDto);
@@ -77,7 +77,7 @@ export class AuthService {
     const user = await this.usersService.findByPayload(payload);
     if (!user) {
       throw new HttpException(
-        new Error(INVALID_TOKEN),
+        new Error('INVALID_TOKEN'),
         HttpStatus.UNAUTHORIZED,
       );
     }
