@@ -1,0 +1,8 @@
+// Authentication and Authorization
+export const ACCOUNT_CREATE_SUCCESS = 'ACCOUNT_CREATE_SUCCESS';
+
+export const ACCOUNT_LOGIN_SUCCESS = 'ACCOUNT_LOGIN_SUCCESS';
+
+export const INVALID_TOKEN = 'INVALID_TOKEN';
+
+export const PASSKEY_LOGIN_SUCCESS = 'PASSKEY_LOGIN_SUCCESS';
