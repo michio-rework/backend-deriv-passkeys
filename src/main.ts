@@ -24,12 +24,12 @@ async function bootstrap() {
 
   app.useGlobalPipes(new ValidationPipe());
   app.enableCors({
-    origin: ['*'],
     preflightContinue: true,
-    credentials: true,
-    methods: 'GET, HEAD, PUT, PATCH, POST, DELETE, OPTIONS',
     optionsSuccessStatus: 204,
     allowedHeaders: ['Accept', 'Content-Type', 'Authorization'],
+    origin: true,
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+    credentials: true,
   });
 
   await app.listen(configService.get<string>('app.port'));
