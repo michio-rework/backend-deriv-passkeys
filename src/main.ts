@@ -23,7 +23,14 @@ async function bootstrap() {
   });
 
   app.useGlobalPipes(new ValidationPipe());
-  app.enableCors();
+  app.enableCors({
+    origin: ['*'],
+    preflightContinue: true,
+    credentials: true,
+    methods: 'GET, HEAD, PUT, PATCH, POST, DELETE, OPTIONS',
+    optionsSuccessStatus: 204,
+    allowedHeaders: ['Accept', 'Content-Type', 'Authorization'],
+  });
 
   await app.listen(configService.get<string>('app.port'));
 }
