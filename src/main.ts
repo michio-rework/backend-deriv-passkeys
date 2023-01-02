@@ -27,7 +27,7 @@ async function bootstrap() {
     preflightContinue: true,
     optionsSuccessStatus: 204,
     allowedHeaders: ['Accept', 'Content-Type', 'Authorization'],
-    origin: true,
+    origin: '*',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     credentials: true,
   });
