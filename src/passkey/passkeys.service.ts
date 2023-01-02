@@ -13,10 +13,10 @@ import {
   PublicKeyCredentialDescriptorFuture,
   RegistrationCredentialJSON,
 } from '@simplewebauthn/typescript-types';
-import { AuthService } from 'src/auth/auth.service';
+import { AuthService } from '../auth/auth.service';
 // import { PASSKEY_LOGIN_SUCCESS } from 'src/constants';
-import { PrismaService } from 'src/prisma/prisma.service';
-import { UserService } from 'src/user/user.service';
+import { PrismaService } from '../prisma/prisma.service';
+import { UserService } from '../user/user.service';
 import { VerifyLoginPasskeyDto } from './dto/verify-login-passkey.dto';
 import { IPasskeyLoginStatus } from './types';
 

@@ -1,8 +1,8 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { User } from '@prisma/client';
-import { PrismaService } from 'src/prisma/prisma.service';
+import { PrismaService } from '../prisma/prisma.service';
 import { compare, hash } from 'bcrypt';
-import { AuthCredentialsDto } from 'src/auth/dto/auth-credentials.dto';
+import { AuthCredentialsDto } from '../auth/dto/auth-credentials.dto';
 
 interface FormatLogin extends Partial<User> {
   email: string;

@@ -7,7 +7,7 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { ApiOkResponse, ApiSecurity, ApiTags } from '@nestjs/swagger';
-import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { LoginOptionsPasskeyDto } from './dto/login-options-passkey.dto';
 import { VerifyLoginPasskeyDto } from './dto/verify-login-passkey.dto';
 import { VerifyRegistrationPasskeyDto } from './dto/verify-registration-passkey.dto';
